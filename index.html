@@ -5,9 +5,28 @@
 		<style>
 			body { margin: 0; }
 			canvas { width: 100%; height: 100% }
+			#info {
+				position: absolute;
+				width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-family: Monospace;
+				font-size: 13px;
+				font-weight: bold;
+				text-align: center;
+				z-index: 1;
+			}
 		</style>
 	</head>
 	<body>
+		<div id="info">
+			<a href="http://robotics.willh.ml" target="_blank" rel="noopener">
+				Robotics</a> - Interactive Algorithms.
+			<a href="http://github.willh.ml" target="_blank" rel="noopener">
+				Github</a> Page.
+			<a href="http://robotics.willh.ml" target="_blank" rel="noopener">
+				Resume</a> Download.
+		</div>
 		<script src="js/Three.min.js"></script>
 		<script src="js/Detector.js"></script>
 		<script>
@@ -143,7 +162,7 @@
 					cameraPerspectiveHelper.visible = true;
 					cameraOrthoHelper.visible = false;
 				} else {
-					cameraOrtho.far = mesh.position.length();
+					cameraOrtho.far = mesh.position.length() * 2;
 					cameraOrtho.updateProjectionMatrix();
 					cameraOrthoHelper.update();
 					cameraOrthoHelper.visible = true;
