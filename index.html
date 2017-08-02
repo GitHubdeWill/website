@@ -158,11 +158,11 @@
 				// stats.update();
 			}
 			function render() {
-				var r = Date.now() * 0.0005;
+				var r = Date.now() * 0.0001;
 				var time = Date.now() * 0.00005;
-				mesh.position.x = 700 * Math.cos( r );
-				mesh.position.z = 700 * Math.sin( r );
-				mesh.position.y = 700 * Math.sin( r );
+				mesh.position.x = 1000 * Math.cos( r );
+				mesh.position.z = 1000 * Math.sin( r );
+				mesh.position.y = 1000 * Math.sin( r );
 				mesh.visible = false;
 				if ( activeCamera === cameraPerspective ) {
 					// cameraPerspective.fov = 35 + 30 * Math.sin( 0.5 * r );
@@ -178,21 +178,24 @@
 					cameraOrthoHelper.visible = true;
 					cameraPerspectiveHelper.visible = false;
 				}
+				cameraRig.position.x = 100 * Math.sin( r );
+				cameraRig.position.z = 100 * Math.cos( r );
+				cameraRig.position.y = 100 * Math.sin( r );
 				cameraRig.lookAt( mesh.position );
 
 				for ( i = 0; i < scene.children.length; i ++ ) {
 					var object = scene.children[ i ];
 					if ( object instanceof THREE.Points ) {
-						// object.position.x += 10 * (Math.random() - 0.5);
-						// object.position.y += 10 * (Math.random() - 0.5);
-						// object.position.z += 10 * (Math.random() - 0.5);
-						object.rotation.y = time * ( i < 4 ? i + 1 : - ( i + 1 ) );
+						// object.position.x += 1 * (Math.random() - 0.5);
+						// object.position.y += 1 * (Math.random() - 0.5);
+						// object.position.z += 1 * (Math.random() - 0.5);
+						object.rotation.y = (Math.random()*0.0001+time) * ( i < 4 ? i + 1 : - ( i + 1 ) );
 					}
 				}
 
 				for ( i = 0; i < materials.length; i ++ ) {
 					color = parameters[i][0];
-					h = ( 360 * ( color[0] + time ) % 360 ) / 360;
+					h = ( 360 * ( color[0] + time*2 ) % 360 ) / 360;
 					materials[i].color.setHSL( h, color[1], color[2] );
 				}
 
