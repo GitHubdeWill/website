@@ -20,12 +20,15 @@
 	</head>
 	<body>
 		<div id="info">
-			<a href="http://robotics.willh.ml" target="_blank" rel="noopener">
-				Robotics</a> - Interactive Algorithms.
-			<a href="http://github.willh.ml" target="_blank" rel="noopener">
-				Github</a> Page.
-			<a href="http://robotics.willh.ml" target="_blank" rel="noopener">
-				Resume</a> Download.
+			<h3>Welcome to William He's Homepage.</h3>
+			<p>You might want to checkout: 
+				<a href="http://robotics.willh.ml" target="_blank" rel="noopener">
+					Robotics</a> - Interactive Algorithms.
+				<a href="http://github.willh.ml" target="_blank" rel="noopener">
+					Github</a> Page.
+				<a href="http://robotics.willh.ml" target="_blank" rel="noopener">
+					Resume</a> Download.
+			</p>
 		</div>
 		<script src="js/three.min.js"></script>
 		<script src="js/Detector.js"></script>
@@ -58,8 +61,8 @@
 				cameraOrthoHelper = new THREE.CameraHelper( cameraOrtho );
 				scene.add( cameraOrthoHelper );
 				//
-				activeCamera = cameraPerspective;
-				activeHelper = cameraPerspectiveHelper;
+				activeCamera = cameraOrtho;
+				activeHelper = cameraOrthoHelper;
 				// counteract different front orientation of cameras vs rig
 				cameraOrtho.rotation.y = Math.PI;
 				cameraPerspective.rotation.y = Math.PI;
@@ -133,7 +136,7 @@
 				camera.updateProjectionMatrix();
 				cameraPerspective.aspect = aspect;
 				cameraPerspective.updateProjectionMatrix();
-				cameraOrtho.left   = frustumSize * aspect / 2;
+				cameraOrtho.left   = -1 * frustumSize * aspect / 2;
 				cameraOrtho.right  = frustumSize * aspect / 2;
 				// cameraOrtho.left   = - 0.5 * frustumSize * aspect / 2;
 				// cameraOrtho.right  =   0.5 * frustumSize * aspect / 2;
