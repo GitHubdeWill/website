@@ -25,10 +25,7 @@
 	<body bgcolor="#000000" link="#FFFFFF" vlink="#F0F0F0">
 		<div id="info">
 			<h3>You have reach my secret Planet!</h3>
-			<h1>Enjoy the view</h1>
-			<p>
-				More info about this <a href="https://en.wikipedia.org/wiki/Kumamon">Kumamon</a>
-			</p>
+			<h1>Enjoy!</h1>
 		</div>
 		<script src="js/three.min.js"></script>
 		<script src="js/Detector.js"></script>
@@ -81,10 +78,8 @@
 				scene.fog = new THREE.FogExp2( 0x000000, 0.0007 );
 				// Stars
 
-				var sprite = new THREE.TextureLoader().load( 'img/xbx.png' );
-
 				geometry = new THREE.Geometry();
-				for ( i = 0; i < 2000; i ++ ) {
+				for ( i = 0; i < 5000; i ++ ) {
 					var vertex = new THREE.Vector3();
 					vertex.x = Math.random() * 2000 - 1000;
 					vertex.y = Math.random() * 2000 - 1000;
@@ -92,17 +87,16 @@
 					geometry.vertices.push( vertex );
 				}
 				parameters = [
-					[ [1, 1, 0.5], 400 ],
-					[ [0.95, 1, 0.5], 100 ],
-					[ [0.90, 1, 0.5], 75 ],
-					[ [0.85, 1, 0.5], 50 ],
-					[ [0.80, 1, 0.5], 25 ]
+					[ [1, 1, 0.5], 25 ],
+					[ [0.95, 1, 0.5], 20 ],
+					[ [0.90, 1, 0.5], 15 ],
+					[ [0.85, 1, 0.5], 10 ],
+					[ [0.80, 1, 0.5], 5 ]
 				];
 				for ( i = 0; i < parameters.length; i ++ ) {
 					color = parameters[i][0];
-					// color = [0,0,0];
 					size  = parameters[i][1];
-					materials[i] = new THREE.PointsMaterial( { size: size, map: sprite, alphaTest: 0.5, transparent: true } );
+					materials[i] = new THREE.PointsMaterial( { size: size } );
 					particles = new THREE.Points( geometry, materials[i] );
 					particles.rotation.x = Math.random() * 6;
 					particles.rotation.y = Math.random() * 6;
@@ -198,7 +192,6 @@
 
 				for ( i = 0; i < materials.length; i ++ ) {
 					color = parameters[i][0];
-					color = [1,1,1];
 					h = ( 360 * ( color[0] + time*2 ) % 360 ) / 360;
 					materials[i].color.setHSL( h, color[1], color[2] );
 				}
