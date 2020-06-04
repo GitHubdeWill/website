@@ -13,7 +13,7 @@ var list_dir = async function list_dir (dir_name) {
 };
 
 router.get("/list_posts", async function(req, res, next) {
-    var post_dir =  path.join(__dirname, '../public/markdowns');
+    var post_dir =  path.join(__dirname, '../public_resources/markdowns');
     var ret = await list_dir(post_dir);
     var retjson = '{"posts":['+JSON.stringify(ret.stdout.trim()).replace(/\\n/g, '","')+']}';
     console.log(retjson);
