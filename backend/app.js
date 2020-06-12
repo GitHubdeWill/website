@@ -6,8 +6,8 @@ var logger = require('morgan');
 var cors = require("cors");
 var serveIndex = require('serve-index');
 
-var fetchRouter = require('./routes/fetch_api');
-var indexRouter = require('./routes/index');
+var fetchRouter = require('./routes/fetch_api');  // routes to /list_posts
+var indexRouter = require('./routes/index');  // routes to /
 
 var app = express();
 
@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use('/public', express.static(path.join(__dirname, 'public_resources')));
 app.use('/posts', express.static(path.join(__dirname, 'public_resources/markdowns')), serveIndex(path.join(__dirname, 'public_resources/markdowns')));
 app.use('/api', fetchRouter);
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));  // Ensures the react app can fetch all of the css and js file as it need
 app.use ('/', indexRouter);
 
 // catch 404 and forward to error handler
