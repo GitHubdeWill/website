@@ -25,8 +25,8 @@ app.use(cookieParser());
 
 // Route for fetching public resources
 app.use('/public', express.static(path.join(__dirname, 'public_resources')));
-// Shorthand Route for fetching Markdowns
-app.use('/posts', express.static(path.join(__dirname, 'public_resources/markdowns')), serveIndex(path.join(__dirname, 'public_resources/markdowns')));
+// Route for Serve-Index fetching Posts
+app.use('/posts', express.static(path.join(__dirname, 'public_resources/posts')), serveIndex(path.join(__dirname, 'public_resources/posts')));
 // Routes for api fetching
 app.use('/api', fetchRouter);
 // Ensures the react app can fetch all of the css and js file as it need
