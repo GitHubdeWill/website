@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './components/home.js';
+import RootContainer from './containers/root_container'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(<Home />, document.getElementById('app'));
+ReactDOM.render(<RootContainer />, document.getElementById('app'));
