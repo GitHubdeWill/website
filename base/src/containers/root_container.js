@@ -1,10 +1,11 @@
 import React, { Component, useState } from 'react';
 
-import Home from '../components/home'
-import BlogPosts from '../components/blogposts'
-import Projects from '../components/projects'
+import HomePage from '../pages/home'
+import BlogPostsPage from '../pages/blogposts'
+import ProjectsPage from '../pages/projects'
+import MorePage from '../pages/more'
 
-import GlobalNavbar from '../shared_components/navbar'
+import GlobalNavbar from '../components/navbar'
 
 // The root container should include the Navigation Bar and Footer for the Website
 // It should also handle the change of different pages when the user clicks the NavBar
@@ -24,18 +25,20 @@ class RootContainer extends Component{
    }
 
    // Switch page to be rendered
-   renderSwitch(param) {
-      switch(param) {
+   renderSwitch(targetPage) {
+      switch(targetPage) {
          case 'Home':
-            return <Home/>;
+            return <HomePage/>;
          case 'BlogPosts':
-            return <BlogPosts/>;
+            return <BlogPostsPage/>;
          case 'Projects':
-            return <Projects/>;
+            return <ProjectsPage/>;
+         case 'More':
+            return <MorePage/>;
          default:
             return <Home/>;
       }
-    }
+   }
 
    render () {
       const page2Render = this.state.currentPage;

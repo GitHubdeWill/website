@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class BlogPosts extends Component{
+class MorePage extends Component{
    render(){
       return(
          <div>
-            <h1>BlogPosts</h1>
+            <h1>MorePage</h1>
          </div>
       );
    }
 }
-export default BlogPosts;
+export default MorePage;
