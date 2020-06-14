@@ -19,7 +19,7 @@ router.get("/list_posts", async function(req, res, next) {
     var array = [];
     for (let i = 0; i < filenames.length; i++) {
         let filename = filenames[i];
-        var splitret = filename.split(":=");
+        var splitret = filename.split("-_-");
         if (splitret.length != 2) continue;
         array.push({
             "date": splitret[0],
