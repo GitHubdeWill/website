@@ -39,7 +39,7 @@ class PostDrawer extends React.Component {
       return (
         <ListItem button key={item.filename} onClick={() => {this.handleChange(item)}}>
           <ListItemIcon><DescriptionIcon/></ListItemIcon>
-          <ListItemText primary={item.title + item.date} />
+          <ListItemText primary={item.title +' '+ item.date} />
         </ListItem>
       );
     });
