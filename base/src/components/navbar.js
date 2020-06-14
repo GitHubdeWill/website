@@ -39,7 +39,7 @@ class GlobalNavbar extends Component {
 
     return (
       <div>
-        <Navbar color="light" light expand="md" fixed="top">
+        <Navbar color="dark" dark expand="md" fixed="top">
           <NavbarBrand href="/">William He's HomePage</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>

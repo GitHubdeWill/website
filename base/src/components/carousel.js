@@ -66,7 +66,7 @@ class ProjectCarousel extends Component {
             {
               `.${item.classname} {
                   max-width: 100%;
-                  height: 300px;
+                  height: 380px;
                   background-image: url("${item.src}");
                   background-size:     cover;
                   background-repeat:   no-repeat;
