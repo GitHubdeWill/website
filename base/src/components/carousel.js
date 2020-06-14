@@ -67,10 +67,11 @@ class ProjectCarousel extends Component {
               `.${item.classname} {
                   max-width: 100%;
                   height: 380px;
-                  background-image: url("${item.src}");
+                  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("${item.src}");
                   background-size:     cover;
                   background-repeat:   no-repeat;
                   background-position: center center;
+                  color: white;
                 }`
             }
           </style>
@@ -85,7 +86,7 @@ class ProjectCarousel extends Component {
             onExiting={() => this.setAnimating(true)}
             onExited={() => this.setAnimating(false)}
           >
-            <CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.caption} />
+            <CarouselCaption captionText={item.caption} captionHeader={item.altText} />
           </CarouselItem>
       );
     });

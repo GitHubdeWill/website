@@ -2,22 +2,22 @@
   {
     "id": 1,
     "classname": "board_json_1",
-    "src": "/public/images/home1.png",
-    "altText": "Slide 1 from JSON",
-    "caption": "Slide 1 from JSON"
+    "src": "/public/images/projectcrs1.jpg",
+    "altText": "Can Androids find what they need?",
+    "caption": "Intelligent Search @ Vision Lab"
   },
   {
     "id": 2,
     "classname": "board_json_2",
-    "src": "/public/images/home2.png",
-    "altText": "Slide 2 from JSON",
-    "caption": "Slide 2 from JSON"
+    "src": "/public/images/projectcrs2.jpg",
+    "altText": "Efficiency in Knowledge Delivery",
+    "caption": "PAOL Lecture Capturing System @ RIPPLES Group"
   },
   {
     "id": 3,
     "classname": "board_json_3",
-    "src": "/public/images/home3.png",
-    "altText": "Slide 3 from JSON",
-    "caption": "Slide 3 from JSON"
+    "src": "/public/images/projectcrs3.png",
+    "altText": "How do Robots know where they are?",
+    "caption": "Interactive Probablistic Robotics @ AMRL"
   }
 ]

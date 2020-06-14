@@ -1,0 +1,58 @@
+[
+    {
+        "id": 101,
+        "project_name": "Video Compression Literature Study",
+        "time": "2019-2020",
+        "abstract": "In the recent years, streaming industry has undergone a tremendous change and is expected to continue this trend for many years to come.<br/>Video data also play a significant role in the whole internet industry. They are used to analyze, learn, and also predict the patterns of human behaviors and other natural phenomena.<br/>As a result, the efficiency of transferring and storing data becomes one of the bottleneck for these applications. One of the possible solutions is to use compression to reduce the size of the data while keeps the loss to the minimal. In this study, we will be reviewing Video Compression through Image Interpolation (Chao-Yuan Wu et al. 2018) and its re-implementation, which is one of the earliest work on learning-based video compression.",
+        "moreinfo": ""
+    },
+    {
+        "id": 100,
+        "project_name": "Intelligent Search @ Vision Lab",
+        "time": "2018-2019",
+        "abstract": "<i>Visual Common Sense</i> is fully utilized by human and even other creatures all the time. Some of the skills of acquiring environment knowledge were so common that might have been overlooked.<br/>We believe that the ability to make intelligent assessments of where things might be, even though they are not visible, is a critical and ubiquitous capability shared by humans and other intelligent creatures.<br/>In this project, we aimed to explore the concept of visual common sense, and in particular, help to define what it means to perform successful inference about what we cannot see, conditioned on what we can see.",
+        "moreinfo": "<a href='http://openaccess.thecvf.com/content_CVPRW_2019/papers/Vision_Meets_Cognition_Camera_Ready/Singh_HalfHalf_New_Tasks_and_Benchmarks_for_Studying_Visual_Common_Sense_CVPRW_2019_paper.pdf' target='_blank'>Paper Link</a>"
+    },
+    {
+        "id": 99,
+        "project_name": "Unsupervised Learning of Depth and Ego-Motion from Monocular VideoUsing 3D Geometric Constraints (Mahjourian et al., 2018) Evaluation and Extended Experiments",
+        "time": "2019",
+        "abstract": "Human beings have the ability to infer ego-motion and depth of a scent even over a short time period. For example, when we cross the street, we can easily locate vehicles and react fast to avoid them. One explanation for this behavior is that we develop a comprehensive understanding of the world through our past visual observations which contains moving objects and different 3D space structures. From thousands and thousands of these experiences, we have learnt how to regulate this world and we can apply this knowledge when we enter a new environment. If we can apply this ability well into robotics and autonomous driving, it will improve our normal life a lot.",
+        "moreinfo": ""
+    },
+    {
+        "id": 98,
+        "project_name": "Phishing websites features classification based on extreme learning machine [Sönmez et al. 2018] Literature Study and Extended Experiment",
+        "time": "2019",
+        "abstract": "Phishing attack is one of the most common attacks on the Internet. The cost of such attack is less than most of the other cyber-attacks, while there is no general countermeasure for phishing. Researchers and Computer Scientists has been working on a good phishing detection tool since the start of the wide spread of the Internet. In this paper, the authors are presenting a set of different features that might be useful for phishing detection by feature engineering. Based on the results of these features, the authors performed a series of statistical learning and artificial networks learning to build a model for phishing detection. The authors showed that one particular model,the Extreme Learning Machine, out-performs most of the other models such as Naive Bayes and Support Vector Machine. In this project, we have re-implemented the work and performed model selection on the given approach. Furthermore, we implemented the data mining algorithm to fetch the websites and assign a 30-dimensional vector for each of them for model learning. After that we will compare the results of the original work with our results.",
+        "moreinfo": ""
+    },
+    {
+        "id": 97,
+        "project_name": "Selective Visual Data Preservation @ RIPPLES Group",
+        "time": "2018-2019",
+        "abstract": "Consider you have a library of aging old videos taking a significant amount of space of the data server, and you want to cut the size of the files down and you don't really have time and motive to go through and process all of the videos. But you really need more space for newer data. In this case, we will need to cut the size of the video files to free space for new data.<br/>A smart and efficient batch algorithm that can be easily applied to large amount of data with minimum amount of human intervention is crucial for such task.<br/>We believe that such attempt on development of algorithm for processing large amount of visual data will have a high demand during this time of information explosion, building upon the combination of successful computer vision capabilities such as object detection and image segmentation, and Natural Language Processing techniques such as word representation and image captioning.",
+        "moreinfo": ""
+    },
+    {
+        "id": 96,
+        "project_name": "Compiler-Independent Code Auto-Completion @ UMass",
+        "time": "2018",
+        "abstract": "People have been trying to train machines to understand human natural languages for several decades already. We have been changing the ways how we represents words, we feed novels and essays to them and hope that some day, the machines can understand will understand what we are saying. However, the programming languages, invented and written by human, was developed to be read and understood by machines. Compared to human natural languages, programs are more logically structured with much less vocabularies. We believe this can be a good starting point for us to try to dig into research in natural language processing.<br/>Compiled languages more or less have an auto-completion function built in. But this is not the case for scripting languages. Let's take JavaScript as an example, the libraries are not loaded when you write the program. They will probably not be downloaded from the Content Delivery Network until they are actually running.<br/>Currently auto-completion for scripting language are mostly based on naive conditional and search algorithms. A good auto-completion algorithm that is independent to compilers will be extremely helpful to boost productivity and to step forward in Natural Language Processing researches.",
+        "moreinfo": ""
+    },
+    {
+        "id": 95,
+        "project_name": "Presentations Automatically Organized from Lectures (PAOL) @ RIPPLES Group",
+        "time": "2017-2018",
+        "abstract": "In this project, we are trying to develop a light-weight automated lecture capturing scheduling and managing system that supports for LMS platforms with LTI Specifications and investigate how multimedia content delivery systems support and enhance teaching and learning at a distance and in the classroom. We are also evaluating the application of multimedia technologies to collaborative work and outreach to learning and other communities.",
+        "moreinfo": ""
+    },
+    {
+        "id": 94,
+        "project_name": "Interactive Localization Algorithm Simulation @ UMass Autonomous Mobile Robotics Lab (AMRL)",
+        "time": "2017",
+        "abstract": "Robotics is the science of perceiving and manipulating the physical world through computer-controlled devices. Robotics systems are situated in the physical world, perceive information on their environments through sensors, and manipulate through physical forces.<br/>Intelligent autonomous mobile robots need to know where they are, in order to function correctly. For example, a self-driving car needs to know which street, and which intersection it it at, in order to plan when and which turn it should take next. While some robots have access to GPS readings, such GPS readings are still not sufficiently accurate to make accurate decisions - the error of a commercial GPS is greater than the width of a driving lane, and the decisions taken by a self-driving car need to account specifically for not only which lane it is in, but exactly where in the lane it is.<br/>In this project, we silulated the sources of uncertainty for the problem of mobile robot localization, and one popular algorithm for mobile robot localization, called Monte-Carlo Localization, works on robots.",
+        "moreinfo": "<a href='https://interactive-algos.github.io/' target='_blank'>Project Link</a>"
+    }
+]

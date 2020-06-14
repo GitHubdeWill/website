@@ -6,6 +6,7 @@ import ProjectsPage from '../pages/projects'
 import MorePage from '../pages/more'
 
 import GlobalNavbar from '../components/navbar'
+import Footer from '../components/footer'
 
 // The root container should include the Navigation Bar and Footer for the Website
 // It should also handle the change of different pages when the user clicks the NavBar
@@ -45,7 +46,8 @@ class RootContainer extends Component{
       return (
          <div>
             <GlobalNavbar currentPage={page2Render} onPageChange={this.handlePageChange}/>
-            {this.renderSwitch(page2Render)};
+            {this.renderSwitch(page2Render)}
+            <Footer />
          </div>
       );
    };
