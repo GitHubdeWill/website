@@ -1,10 +1,8 @@
 import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Fab from '@material-ui/core/Fab';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
+// import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -41,7 +39,7 @@ class PostDrawer extends React.Component {
       return (
         <ListItem button key={item.filename} onClick={() => {this.handleChange(item)}}>
           <ListItemIcon><DescriptionIcon/></ListItemIcon>
-          <ListItemText primary={item.title} />
+          <ListItemText primary={item.title + item.date} />
         </ListItem>
       );
     });
@@ -55,7 +53,7 @@ class PostDrawer extends React.Component {
       zIndex: 999
     };
     const drawer_style = {
-      width: 250
+      width: 300
     };
     return (
       <div>

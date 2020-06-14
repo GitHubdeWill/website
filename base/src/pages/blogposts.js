@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import PostDrawer from "../components/drawer";
 import ReactMarkdown from 'react-markdown';
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+
+import Jumbotro from "../components/intro";
+import PostDrawer from "../components/drawer";
 
 class BlogPostsPage extends Component {
 
@@ -45,6 +47,7 @@ class BlogPostsPage extends Component {
       return (
          <div>
             <PostDrawer onPostChange={this.handlePostChange} />
+            <Jumbotro />
             <Container>
                <Row>
                   <Col md="2"></Col>

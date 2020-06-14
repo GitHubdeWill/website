@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 
 import HomePage from '../pages/home'
 import BlogPostsPage from '../pages/blogposts'

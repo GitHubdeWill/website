@@ -1,5 +1,5 @@
-import React, { Component, useState } from 'react';
-import { Container, Row, Col, Button } from 'reactstrap';
+import React, { Component } from 'react';
+import { Container, Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLaptop, faCircle, faAdjust, faRobot } from '@fortawesome/free-solid-svg-icons'
 

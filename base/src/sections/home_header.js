@@ -1,5 +1,5 @@
-import React, { Component, useState } from 'react';
-import { Container, Row, Col, Button } from 'reactstrap';
+import React, { Component } from 'react';
+import { Container, Row, Col } from 'reactstrap';
 
 class HomeHeaderSec extends Component {
     constructor (props) {

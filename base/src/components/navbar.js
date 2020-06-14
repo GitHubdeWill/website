@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react';
+import React, { Component } from 'react';
 import {
   Collapse,
   Navbar,
@@ -47,14 +47,14 @@ class GlobalNavbar extends Component {
               <NavItem>
                 <NavLink href="#"  onClick={() => this.handleChange('Home')}>
                   <span style={(this.props.currentPage !== 'Home')?{ fontWeight: 'normal' } : { fontWeight: 'bold' }}>
-                    Home
+                    About Me
                   </span>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="#"  onClick={() => this.handleChange('BlogPosts') }>
                   <span style={(this.props.currentPage !== 'BlogPosts')?{ fontWeight: 'normal' } : { fontWeight: 'bold' }}>
-                    BlogPosts
+                    Blogs
                   </span>
                 </NavLink>
               </NavItem>
