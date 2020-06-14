@@ -7,15 +7,28 @@ const exec = promisify(require('child_process').exec)
 
 
 var list_dir = async function list_dir (dir_name) {
-    const file_list = await exec('ls -l '+dir_name+" | sed 1d | awk '{print $9} {print $6, $7, $8}'");
+    const file_list = await exec('ls -t '+dir_name);
     return file_list;
 };
 
 router.get("/list_posts", async function(req, res, next) {
     var post_dir =  path.join(__dirname, '../public_resources/posts');
     var ret = await list_dir(post_dir);
-    var retjson = '{"posts":['+JSON.stringify(ret.stdout.trim()).replace(/\\n/g, '","')+']}';
-    console.log(retjson);
+    console.log(ret.stdout.trim().split('\n'));
+    var filenames = ret.stdout.trim().split('\n');
+    var array = [];
+    for (let i = 0; i < filenames.length; i++) {
+        let filename = filenames[i];
+        var splitret = filename.split(":=");
+        if (splitret.length != 2) continue;
+        array.push({
+            "date": splitret[0],
+            "title": splitret[1].replace(".md", ""),
+            "filename": filename
+        });
+    }
+        
+    var retjson = JSON.stringify(array);
 
     res.setHeader('Content-Type',"application/json");
     res.send(retjson);

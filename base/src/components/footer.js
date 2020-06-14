@@ -18,11 +18,9 @@ class Footer extends Component {
           </Col>
           <Col md="4"></Col>
           <Col md="4">
-            <ul className="list-inline quicklinks">
-              <li className="list-inline-item">
+            <div>
                 Powered by React
-              </li>
-            </ul>
+            </div>
           </Col>
         </Row>
       </Container>

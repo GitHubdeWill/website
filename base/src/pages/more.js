@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faGit } from '@fortawesome/free-brands-svg-icons'
-import { faGuitar, faLink } from '@fortawesome/free-solid-svg-icons'
+import { faGuitar } from '@fortawesome/free-solid-svg-icons'
 
 
 class MorePage extends Component {
    render() {
       return (
-         <section class="bg-light" id="team">
+         <section className="bg-light" id="team">
             <Container>
                <Row>
                   <Col lg="12" className="text-center">

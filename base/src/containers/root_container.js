@@ -16,7 +16,7 @@ class RootContainer extends Component{
       super(props);
       this.handlePageChange = this.handlePageChange.bind(this);
       this.state = {
-         currentPage: 'Home'
+         currentPage: 'BlogPosts'
       };
    }
 

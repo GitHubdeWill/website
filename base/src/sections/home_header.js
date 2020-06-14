@@ -1,6 +1,5 @@
 import React, { Component, useState } from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
-import classNames from 'classnames';
 
 class HomeHeaderSec extends Component {
     constructor (props) {
@@ -8,13 +7,12 @@ class HomeHeaderSec extends Component {
     }
 
     render () {
-        const potraitClasses = classNames('intro-port', 'mx-auto', 'rounded-circle');
         return (
             <header className="masthead">
                 <Container>
                     <div className="intro-text">
                         <div className="intro-lead-in">Ziwei (William) He</div>
-                        <img className={potraitClasses} src="/public/images/portrait.jpg" alt=""></img>
+                        <img className="intro-port mx-auto rounded-circle" src="/public/images/portrait.jpg" alt=""></img>
                         <Row>
                             <Col lg="2"></Col>
                             <Col lg="8" className="center-block">
