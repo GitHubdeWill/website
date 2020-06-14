@@ -4,11 +4,12 @@ import Fab from '@material-ui/core/Fab';
 import HomeHeaderSec from '../sections/home_header';
 import HomeFociSec from '../sections/home_foci';
 import HomeTimelineSec from '../sections/home_timeline';
+import HomeOtherSec from '../sections/home_other';
 
 class HomePage extends Component {
    constructor (props) {
       super(props);
-      this.numSecs = 3;
+      this.numSecs = 4;
       this.myRefs = [];
       for (let i = 0; i < this.numSecs; i++) {
          this.myRefs.push(React.createRef());
@@ -49,6 +50,9 @@ class HomePage extends Component {
             </div>
             <div ref={this.myRefs[2]}>
                <HomeTimelineSec />
+            </div>
+            <div ref={this.myRefs[3]}>
+               <HomeOtherSec />
             </div>
          </div>
       );

@@ -45,7 +45,7 @@ class HomeFociSec extends Component {
                                 <FontAwesomeIcon icon={faCircle} transform="grow-15" />
                                 <FontAwesomeIcon icon={faRobot} inverse />
                             </span>
-                            <h4 className="service-heading">Robotics Navigation</h4>
+                            <h4 className="service-heading">Robotics Navigation and Planning</h4>
                             <p className="text-muted">I am interested in researches related to robot localization and navigation algorithms.</p>
                         </Col>
                     </Row>
