@@ -1,0 +1,58 @@
+[
+    {
+        "id": 101,
+        "time": "Jun. 2019-Present",
+        "title": "Software Engineer @Amazon Robotics",
+        "type": "Robotics<br/>Planning",
+        "description": ""
+    },
+    {
+        "id": 100,
+        "time": "May. 2019-May. 2020",
+        "title": "Graduate SDE Intern @Dell EMC",
+        "type": "Cloud<br/>Computing",
+        "description": "-Developed and maintained the system for pre-sales performance characteristics testing and consolidation of various workloads for VxRail Appliances.<br/>-Contributed to algorithms that help customers to determine the best configuration of products based on prospective workloads, performance characteristics, and real-world usage data with statistical analysis and visualization in Python, PHP and JavaScript"
+    },
+    {
+        "id": 99,
+        "time": "Jun. 2018-Jun. 2019",
+        "title": "Research Assistant @UMass Vision Lab",
+        "type": "Computer<br/>Vision",
+        "description": "-Research the concept of visual common sense to perform successful inference about what is invisible, conditioned on what is visible.<br/>-Purposed new benchmarks and optimized algorithms using features extracted from deep learning network layers.<br/>-Ran Experiments of proposed models on multiple tasks include feature-based text recognition, unsupervised learning over classification model, and visual analysis on robotics navigation"
+    },
+    {
+        "id": 98,
+        "time": "Jan. 2017-Dec. 2018",
+        "title": "Research Assistant @UMass RIPPLES Group",
+        "type": "Multi-Media<br/>Software<br/>Eng.",
+        "description": "-Research on solutions on portable automatic-scheduling lecture capturing, processing, streaming and management system<br/>-Developed and maintained the capturing scheduling and management system, the integration with front-end team and data storage using C++, Python and Qt Framework<br/>-Optimized the product to handle scheduling, capturing, processing and streaming lecture and other visual-aid sources on Raspberry Pi, a portable and inexpensive platform"
+    },
+    {
+        "id": 97,
+        "time": "May. 2017-Aug. 2017",
+        "title": "Data Mining Engineer Intern @ Xtalpi Inc.",
+        "type": "Data<br/>Mining",
+        "description": "-Implemented tools that fetch data from online patent libraries, process and classify graphs, and extracts graph data using Python and Computer Vision algorithms.<br/>-Analyzed XRPD and Raman Shift Graphs and extract critical values of small molecule drugs to help the scientists estimate crystal forms and properties with over 1,000,000 instances. The proposed model achieved an accuracy of about 90 percent."
+    },
+    {
+        "id": 96,
+        "time": "May 2017-Aug 2017",
+        "title": "Research Assistant @UMass AMRL",
+        "type": "Probablistic<br/>Robotics",
+        "description": "-Developed an educational website to simulate, compare and visualize Probabilistic Robotics Localization models<br/>-Analyzed performances of Monte Carlo Localization with Particle filter for robot localization using Javascript"
+    },
+    {
+        "id": 95,
+        "time": "Jan. 2016-Mar. 2017",
+        "title": "Remote Project Lead @Mengyin Group",
+        "type": "Data<br/>Mgmt.",
+        "description": "-Built an outsourcing hiring information management system with chatting functionality via a chat bot using Google Framework that based on QQ, a social media platform by Tencent.<br/>-The application resolves the communication barriers between employers and employees. Pushed to production and have about 4000 clients and maximum of 200 active users within 24 hrs"
+    },
+    {
+        "id": 94,
+        "time": "Sep. 2016-Feb. 2017",
+        "title": "Remote Android SDE @Mengyin Group",
+        "type": "Android<br/>Studio",
+        "description": "-Worked on a mobile application that records time arrangement of the user with statistical analysis and evaluation over time distributions on certain behaviors.<br/>-Implemented the whole application including user interface, Service layer and Data management. <br/>-As of Feb 2017, the project has about 30 Alpha testers from various countries"
+    }
+]
