@@ -7,7 +7,7 @@ const exec = promisify(require('child_process').exec)
 
 
 var list_dir = async function list_dir (dir_name) {
-    const file_list = await exec('ls -1 '+dir_name);
+    const file_list = await exec('ls -1r '+dir_name);
     return file_list;
 };
 
