@@ -58,7 +58,7 @@ class BlogPostsPage extends Component {
                         <Col sm="4" className="text-center mx-auto">{this.state.date}</Col>
                      </Row>
                      <br/><br/>
-                     <Markdown source={this.state.currentPostText} />
+                     <Markdown>{this.state.currentPostText}</Markdown>
                   </Col>
                   <Col md="2"></Col>
                </Row>
