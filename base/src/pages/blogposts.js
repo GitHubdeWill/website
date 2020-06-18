@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 import Jumbotro from "../components/intro";
 import PostDrawer from "../components/drawer";
+import Markdown from "../components/advmarkdown";
 
 class BlogPostsPage extends Component {
 
@@ -57,7 +58,7 @@ class BlogPostsPage extends Component {
                         <Col sm="4" className="text-center mx-auto">{this.state.date}</Col>
                      </Row>
                      <br/><br/>
-                     <ReactMarkdown source={this.state.currentPostText} />
+                     <Markdown source={this.state.currentPostText} />
                   </Col>
                   <Col md="2"></Col>
                </Row>

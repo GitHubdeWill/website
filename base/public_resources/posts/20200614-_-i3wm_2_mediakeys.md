@@ -1,4 +1,4 @@
-# [i3] 2. Mapping ThinkPad Media Keys
+# \[i3\] 2. Mapping ThinkPad Media Keys
 
 The first struggle I have with i3 was not able to utilize all of the top row media keys of the thinkpad. I will need to manually bind them individually. Looking for the corresponding key names is a pain as some of them didn't show up when I was running [xev](https://www.x.org/releases/X11R7.7/doc/man/man1/xev.1.xhtml) to capture them.
 
