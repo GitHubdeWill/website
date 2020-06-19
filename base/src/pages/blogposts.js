@@ -27,7 +27,7 @@ class BlogPostsPage extends Component {
          console.log(post_filename);
          var file_properties = post_filename.split("-_-");
          this.setState({
-            title: file_properties[1].replace('_', ' '),
+            title: file_properties[1].replaceAll('_', ' '),
             date: file_properties[0],
             filename: post_filename
          });
@@ -40,7 +40,7 @@ class BlogPostsPage extends Component {
             .then(response => response.json())
             .then(data => {
                this.setState({
-                  title: data[0].title.replace('_', ' '),
+                  title: data[0].title.replaceAll('_', ' '),
                   date: data[0].date,
                   filename: data[0].filename
                });
@@ -55,7 +55,7 @@ class BlogPostsPage extends Component {
    // handle Page change event
    handlePostChange(item) {
       this.setState({
-         title: item.title.replace('_', ' '),
+         title: item.title.replaceAll('_', ' '),
          date: item.date,
          filename: item.filename
       });
@@ -75,7 +75,7 @@ class BlogPostsPage extends Component {
                   <Col md="2"></Col>
                   <Col md="8">
                      <Row>
-                        <Col sm="8" className=" mx-auto">{this.state.title.replace('.md', '')}</Col>
+                        <Col sm="8" className=" mx-auto">{this.state.title.replaceAll('.md', '')}</Col>
                         <Col sm="4" className="text-center mx-auto">{this.state.date}</Col>
                      </Row>
                      <br/><br/>
