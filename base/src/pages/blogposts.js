@@ -27,7 +27,7 @@ class BlogPostsPage extends Component {
          console.log(post_filename);
          var file_properties = post_filename.split("-_-");
          this.setState({
-            title: file_properties[1].replace('_', ' '),
+            title: file_properties[1].replace(/_/g, ' '),
             date: file_properties[0],
             filename: post_filename
          });
@@ -40,8 +40,9 @@ class BlogPostsPage extends Component {
             .then(response => response.json())
             .then(data => {
                this.setState({
-                  title: data[0].title.replace('_', ' '),
-                  date: data[0].date
+                  title: data[0].title.replace(/_/g, ' '),
+                  date: data[0].date,
+                  filename: data[0].filename
                });
                fetch('/public/posts/' + data[0].filename)
                   .then(response => response.text())
@@ -54,7 +55,7 @@ class BlogPostsPage extends Component {
    // handle Page change event
    handlePostChange(item) {
       this.setState({
-         title: item.title.replace('_', ' '),
+         title: item.title.replace(/_/g, ' '),
          date: item.date,
          filename: item.filename
       });
