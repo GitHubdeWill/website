@@ -41,7 +41,8 @@ class BlogPostsPage extends Component {
             .then(data => {
                this.setState({
                   title: data[0].title.replace('_', ' '),
-                  date: data[0].date
+                  date: data[0].date,
+                  filename: data[0].filename
                });
                fetch('/public/posts/' + data[0].filename)
                   .then(response => response.text())
