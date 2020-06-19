@@ -42,6 +42,7 @@ class RootContainer extends Component{
    }
 
    render () {
+
       const page2Render = this.state.currentPage;
       return (
          <div>

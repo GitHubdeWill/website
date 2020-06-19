@@ -14,7 +14,7 @@ var list_dir = async function list_dir (dir_name) {
 router.get("/list_posts", async function(req, res, next) {
     var post_dir =  path.join(__dirname, '../public_resources/posts');
     var ret = await list_dir(post_dir);
-    console.log(ret.stdout.trim().split('\n'));
+    // console.log(ret.stdout.trim().split('\n'));
     var filenames = ret.stdout.trim().split('\n');
     var array = [];
     for (let i = 0; i < filenames.length; i++) {
