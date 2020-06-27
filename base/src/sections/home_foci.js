@@ -24,7 +24,7 @@ class HomeFociSec extends Component {
                     <Row className="text-center">
                         <Col md='4'>
                             <span className="fa-layers fa-fw fa-4x">
-                                <FontAwesomeIcon icon={faCircle} transform="grow-15" />
+                                <FontAwesomeIcon icon={faCircle} transform="grow-10" />
                                 <FontAwesomeIcon icon={faAdjust} inverse />
                             </span>
                             <h4 className="service-heading">Data Science and Machine Learning</h4>
@@ -33,7 +33,7 @@ class HomeFociSec extends Component {
 
                         <Col md='4'>
                             <span className="fa-layers fa-fw fa-4x">
-                                <FontAwesomeIcon icon={faCircle} transform="grow-15" />
+                                <FontAwesomeIcon icon={faCircle} transform="grow-10" />
                                 <FontAwesomeIcon icon={faLaptop} inverse />
                             </span>
                             <h4 className="service-heading">Cloud Software Engineering and Server Administration</h4>
@@ -42,7 +42,7 @@ class HomeFociSec extends Component {
 
                         <Col md='4'>
                             <span className="fa-layers fa-fw fa-4x">
-                                <FontAwesomeIcon icon={faCircle} transform="grow-15" />
+                                <FontAwesomeIcon icon={faCircle} transform="grow-10" />
                                 <FontAwesomeIcon icon={faRobot} inverse />
                             </span>
                             <h4 className="service-heading">Robotics Navigation and Planning</h4>
