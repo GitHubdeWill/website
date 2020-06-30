@@ -17,6 +17,7 @@ class GlobalNavbar extends Component {
       isOpen: false
     };
     this.toggle = this.toggle.bind(this);
+    this.close = this.close.bind(this);
   }
   
   handleChange(pageName) {
@@ -26,6 +27,12 @@ class GlobalNavbar extends Component {
   toggle () {
     this.setState({
       isOpen: !this.state.isOpen
+    });
+  }
+
+  close () {
+    this.setState({
+      isOpen: false
     });
   }
   
@@ -45,35 +52,50 @@ class GlobalNavbar extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="#"  onClick={() => this.handleChange('Home')}>
+                <NavLink href="#"  onClick={() => {
+                  this.close();
+                  this.handleChange('Home');
+                }
+                }>
                   <span style={(this.props.currentPage !== 'Home')?{ fontWeight: 'normal' } : { fontWeight: 'bold' }}>
                     About Me
                   </span>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#"  onClick={() => this.handleChange('BlogPosts') }>
+                <NavLink href="#"  onClick={() => {
+                  this.close();
+                  this.handleChange('BlogPosts');
+                }
+                 }>
                   <span style={(this.props.currentPage !== 'BlogPosts')?{ fontWeight: 'normal' } : { fontWeight: 'bold' }}>
                     Blogs
                   </span>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#"  onClick={() => this.handleChange('Projects')}>
+                <NavLink href="#"  onClick={() => {
+                  this.close();
+                  this.handleChange('Projects');
+                }
+                }>
                   <span style={(this.props.currentPage !== 'Projects')?{ fontWeight: 'normal' } : { fontWeight: 'bold' }}>
                     Projects
                   </span>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#"  onClick={() => this.handleChange('More')}>
+                <NavLink href="#"  onClick={() => {
+                  this.close();
+                  this.handleChange('More');
+                }
+                }>
                   <span style={(this.props.currentPage !== 'More')?{ fontWeight: 'normal' } : { fontWeight: 'bold' }}>
                     More
                   </span>
                 </NavLink>
               </NavItem>
             </Nav>
-            <NavbarText>Simple</NavbarText>
           </Collapse>
         </Navbar>
       </div>
