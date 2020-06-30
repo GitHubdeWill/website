@@ -12,7 +12,7 @@ class HomeHeaderSec extends Component {
                 <Container>
                     <div className="intro-text">
                         <div className="intro-lead-in">Ziwei (William) He</div>
-                        <img className="intro-port mx-auto rounded-circle" src="/public/images/portrait.jpg" alt=""></img>
+                        <img className="intro-port mx-auto rounded-circle" src="/public/images/portrait.jpg" alt="" width="236" height="370"></img>
                         <Row>
                             <Col lg="2"></Col>
                             <Col lg="8" className="center-block">
