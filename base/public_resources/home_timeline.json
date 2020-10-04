@@ -4,14 +4,14 @@
         "time": "Jun. 2020-Present",
         "title": "Software Engineer @Amazon Robotics",
         "type": "Robotics<br/>Software<br/>Engineering",
-        "description": ""
+        "description": "SDE in Virtual Systems Team"
     },
     {
         "id": 100,
         "time": "May. 2019-May. 2020",
         "title": "Graduate SDE Intern @Dell EMC",
         "type": "Cloud<br/>Computing",
-        "description": "-Developed and maintained the system for pre-sales performance characteristics testing and consolidation of various workloads for VxRail Appliances.<br/>-Contributed to algorithms that help customers to determine the best configuration of products based on prospective workloads, performance characteristics, and real-world usage data with statistical analysis and visualization in Python, PHP and JavaScript"
+        "description": "SDE Intern in VxRail VxSEALs Research and Development Team"
     },
     {
         "id": 99,
