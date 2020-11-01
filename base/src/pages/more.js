@@ -33,7 +33,7 @@ class MorePage extends Component {
                                  </a>
                               </li>
                               <li className="list-inline-item">
-                                 <a target='_blank' href="https://www.linkedin.com/in/ziwei-he-674098a1">
+                                 <a target='_blank' href="https://www.linkedin.com/in/ziwei-william-he-674098a1">
                                     <FontAwesomeIcon icon={faLinkedin} />
                                  </a>
                               </li>
