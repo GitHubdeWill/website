@@ -1,12 +1,11 @@
 import React from 'react';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import Fab from '@material-ui/core/Fab';
-import List from '@material-ui/core/List';
-// import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import DescriptionIcon from '@material-ui/icons/Description';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import Fab from '@mui/material/Fab';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import DescriptionIcon from '@mui/icons-material/Description';
 
 
 class PostDrawer extends React.Component {
@@ -18,6 +17,13 @@ class PostDrawer extends React.Component {
     };
 
     this.toggleDrawer = this.toggleDrawer.bind(this);
+
+  }
+
+  toggleDrawer () {
+    this.setState({
+      drawer_opened: !this.state.drawer_opened
+    });
   }
 
   componentDidMount () {
@@ -26,60 +32,52 @@ class PostDrawer extends React.Component {
       .then(data => this.setState({ items: data }));
   }
 
-  toggleDrawer (open) {
-    this.setState({drawer_opened : open });
-  }
-
-  handleChange(item) {
-    this.props.onPostChange(item);
-  }
-  
-  render () {
-    let list = this.state.items.map((item) => {
-      return (
-        <ListItem button key={item.filename} onClick={() => {this.handleChange(item)}}>
-          <ListItemIcon><DescriptionIcon/></ListItemIcon>
-          <ListItemText primary={item.title +' '+ item.date} />
-        </ListItem>
-      );
-    });
+  render(){
     const fab_style = {
-      margin: 0,
-      top: 'auto',
-      right: 20,
-      bottom: 20,
-      left: 'auto',
-      position: 'fixed',
-      zIndex: 999
+        margin: 0,
+        top: 'auto',
+        right: 80,
+        bottom: 20,
+        left: 'auto',
+        position: 'fixed',
+        zIndex: 999
     };
-    const drawer_style = {
-      width: 300
-    };
+
     return (
-      <div>
-        <Fab style={fab_style} variant="extended" onClick={() => {this.toggleDrawer(true)}}>
-          All Posts
-        </Fab>
-        <React.Fragment>
+        <div>
             <SwipeableDrawer
-              anchor='right'
-              open={this.state.drawer_opened}
-              onClose={() => {this.toggleDrawer(false)}}
-              onOpen={() => {this.toggleDrawer(true)}}
+                anchor="right"
+                open={this.state.drawer_opened}
+                onClose={this.toggleDrawer}
+                onOpen={this.toggleDrawer}
             >
-              <div
-                style={drawer_style}
-                role="presentation"
-                onClick={() => {this.toggleDrawer(false)}}
-                onKeyDown={() => {this.toggleDrawer(false)}}
-              >
-                <List>
-                  {list}
+                <List style={{minWidth: 400}}>
+                    {this.state.items.map((item) => (
+                    <div key={item.filename}>
+                        <ListItem button onClick={
+                          () => {
+                            this.props.handlePostChange(item.filename, item.title, item.date);
+                            this.toggleDrawer();
+                          }
+                        }>
+                        <ListItemIcon>
+                          <DescriptionIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary={item.title}
+                            secondary={item.date}
+                        />
+                        </ListItem>
+                    </div>
+                    ))}
                 </List>
-              </div>
             </SwipeableDrawer>
-          </React.Fragment>
-      </div>
+            <Fab style={fab_style} variant="extended" onClick={this.toggleDrawer}>
+              <span style={{ marginLeft: 10}}>
+                Posts
+              </span>
+            </Fab>
+        </div>
     );
   }
 }

@@ -1,7 +1,4 @@
 const path = require("path");
-// const webpack = require('webpack');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: path.join(__dirname, "src", "main.js"),
@@ -14,23 +11,28 @@ module.exports = {
                     loader: "babel-loader"
                 }
             },
-            { test: /\.css$/, loader: 'style-loader!css-loader' },
-            { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
-            { test: /\.(woff|woff2)$/, loader:"url-loader?prefix=font/&limit=5000" },
-            { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
-            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" }
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: false  // Don't resolve URLs — let Express serve /public/*
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|svg)$/,
+                type: 'asset/resource'
+            }
         ]
     },
-    plugins: [
-        // new CleanWebpackPlugin(['dist/*']) for < v2 versions of CleanWebpackPlugin
-        // new CleanWebpackPlugin(),
-        // new HtmlWebpackPlugin({
-        //     title: 'Production',
-        // }),
-    ],
+    plugins: [],
     output: {
         path: path.join(__dirname, "public"),
         filename: "bundle.js",
         publicPath: "/"
-    }, 
+    },
 };

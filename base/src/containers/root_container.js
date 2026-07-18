@@ -37,7 +37,7 @@ class RootContainer extends Component{
          case 'More':
             return <MorePage/>;
          default:
-            return <Home/>;
+            return <HomePage/>;
       }
    }
 

@@ -22,7 +22,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
-
 // Route for fetching public resources
 app.use('/public', express.static(path.join(__dirname, 'public_resources')));
 // Route for Serve-Index fetching Posts

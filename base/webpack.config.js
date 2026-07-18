@@ -1,8 +1,8 @@
 const path = require("path");
-const webpack = require('webpack');
 
 module.exports = {
     entry: path.join(__dirname, "src", "main.js"),
+    mode: 'development',
     module: {
         rules: [
             {
@@ -12,27 +12,22 @@ module.exports = {
                     loader: "babel-loader"
                 }
             },
-            { test: /\.css$/, loader: 'style-loader!css-loader' },
-            { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
-            { test: /\.(woff|woff2)$/, loader:"url?prefix=font/&limit=5000" },
-            { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
-            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+            {
+                test: /\.(woff|woff2|eot|ttf|svg)$/,
+                type: 'asset/resource'
+            }
         ]
     },
-    resolve: {
-        extensions: ['*', '.js', '.jsx']
-    },
+    plugins: [],
     output: {
         path: path.join(__dirname, "public"),
         filename: "bundle.js",
         publicPath: "/"
-    }, 
-    plugins: [
-        // new webpack.HotModuleReplacementPlugin()
-    ],
+    },
     devServer: {
-        // hot: true,
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true
     },
     watch: true,
     watchOptions: {

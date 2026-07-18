@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Fab from '@material-ui/core/Fab';
+import Fab from '@mui/material/Fab';
 
 import HomeHeaderSec from '../sections/home_header';
 import HomeFociSec from '../sections/home_foci';
@@ -25,7 +25,7 @@ class HomePage extends Component {
    scrollToNextMyRef () {
       window.scrollTo(0, this.myRefs[this.state.currentSec].current.offsetTop);
       this.setState({currentSec: (this.state.currentSec+1)%this.numSecs});
-   } 
+   }
 
    render(){
       const fab_style = {
@@ -39,7 +39,7 @@ class HomePage extends Component {
      };
       return(
          <div>
-            <Fab style={fab_style} variant="extended" onClick={this.scrollToNextMyRef}>
+            <Fab style={fab_style} onClick={this.scrollToNextMyRef}>
                Next Section
             </Fab>
             <div ref={this.myRefs[0]}>

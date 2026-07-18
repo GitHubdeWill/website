@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLaptop, faCircle, faAdjust, faRobot } from '@fortawesome/free-solid-svg-icons'
+import { faLaptop, faCircle, faCircleHalfStroke, faRobot } from '@fortawesome/free-solid-svg-icons'
 
 import classNames from 'classnames';
 
@@ -25,7 +25,7 @@ class HomeFociSec extends Component {
                         <Col md='4'>
                             <span className="fa-layers fa-fw fa-4x">
                                 <FontAwesomeIcon icon={faCircle} transform="grow-10" />
-                                <FontAwesomeIcon icon={faAdjust} inverse />
+                                <FontAwesomeIcon icon={faCircleHalfStroke} inverse />
                             </span>
                             <h4 className="service-heading">Data Science and Machine Learning</h4>
                             <p className="text-muted">I am interested in researches related to Information Retrieval, Statistical Learning on Big Data and Computer Vision using various machine learning methodologies.</p>

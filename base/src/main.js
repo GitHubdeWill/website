@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 // Container that manages all pages
 import RootContainer from './containers/root_container'
@@ -8,4 +8,5 @@ import RootContainer from './containers/root_container'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './static/css/main.css';
 
-ReactDOM.render(<RootContainer />, document.getElementById('app'));
+const root = createRoot(document.getElementById('app'));
+root.render(<RootContainer />);

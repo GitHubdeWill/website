@@ -7,21 +7,20 @@ router.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
-router.get('/post/_*', function(req, res) {
+// Catch /post/_anything and serve the SPA (client-side routing)
+router.get(/^\/post\/_.+/, function(req, res) {
   res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
-router.get('/post/*', function(req, res){
-  var reqpath = req.params[0];
-  // reqpath = path.join(__dirname, '../public', reqpath);
-  // console.log(reqpath);
+// For other /post/* paths, try to serve the file from public
+router.get(/^\/post\/.+/, function(req, res){
+  var reqpath = req.path;
   res.sendFile(reqpath, {root: path.join(__dirname, '../public')});
 });
 
-router.get('/*', function(req, res){
-  var reqpath = req.params[0];
-  // reqpath = path.join(__dirname, '../public', reqpath);
-  // console.log(reqpath);
+// Fallback: try to serve from public
+router.get(/.+/, function(req, res){
+  var reqpath = req.path;
   res.sendFile(reqpath, {root: path.join(__dirname, '../public')});
 });
 

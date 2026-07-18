@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactMarkdown from 'react-markdown';
 import { Container, Row, Col } from 'reactstrap';
 
 import Jumbotro from "../components/intro";
@@ -22,9 +21,7 @@ class BlogPostsPage extends Component {
    componentDidMount() {
       var req_url = window.location.pathname;
       if (req_url.startsWith("/post/_")) {
-         // console.log("redirecting to specific post");
          var post_filename = decodeURI(req_url).split("/post/_")[1];
-         console.log(post_filename);
          var file_properties = post_filename.split("-_-");
          this.setState({
             title: file_properties[1].replace(/_/g, ' '),
@@ -52,23 +49,21 @@ class BlogPostsPage extends Component {
       }
    }
 
-   // handle Page change event
-   handlePostChange(item) {
+   handlePostChange(filename, title, date) {
       this.setState({
-         title: item.title.replace(/_/g, ' '),
-         date: item.date,
-         filename: item.filename
+         title: title.replace(/_/g, ' '),
+         date: date,
+         filename: filename
       });
-      fetch('/public/posts/' + item.filename)
+      fetch('/public/posts/' + filename)
          .then(response => response.text())
          .then(data => this.setState({ currentPostText: data }));
    }
 
    render() {
-
       return (
          <div>
-            <PostDrawer onPostChange={this.handlePostChange} />
+            <PostDrawer handlePostChange={this.handlePostChange} />
             <Jumbotro />
             <Container>
                <Row>
